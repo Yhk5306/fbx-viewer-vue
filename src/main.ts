@@ -1,2 +1,4 @@
+import FbxViewer from "./components/FbxViewer.vue";
 
-export {default as FbxViewer} from './components/FbxViewer.vue'
+
+export {FbxViewer}

@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/main.ts',
-      name: 'kotix-carousel'
+      name: 'fbx-viewer-vue'
     },
     rollupOptions: {
       external: ['vue'],

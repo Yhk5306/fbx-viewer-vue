@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="productViewer" ></div>
+  <div ref="fbxContainer" class="fbx-viewer"></div>
 </template>
 
 <script setup lang="ts">
@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-const container = ref(null);
+const fbxContainer = ref(null);
 let scene: THREE.Scene, camera: THREE.Camera, renderer: THREE.WebGLRenderer, fbxModel, controls: OrbitControls;
 
 const props = defineProps({
@@ -76,7 +76,7 @@ const props = defineProps({
 
 
 onMounted(() => {
-  if (container.value) {
+  if (fbxContainer.value) {
     init();
     animate();
   }
@@ -86,8 +86,8 @@ function init() {
   scene = new THREE.Scene();
   THREE.ColorManagement.enabled = true;
 
-  const containerWidth = container.value.clientWidth;
-  const containerHeight = container.value.clientHeight;
+  const containerWidth = fbxContainer.value.clientWidth;
+  const containerHeight = fbxContainer.value.clientHeight;
   const aspectRatio = containerWidth / containerHeight;
 
   camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
@@ -96,7 +96,7 @@ function init() {
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(containerWidth, containerHeight);
-  container.value.appendChild(renderer.domElement);
+  fbxContainer.value.appendChild(renderer.domElement);
 
   const loader = new FBXLoader();
   loader.load(props.fbx, (object) => {
@@ -214,7 +214,7 @@ function animate() {
 </script>
 
 <style scoped>
-.productViewer {
+.fbx-viewer{
   width: 100%;
   height: 100%;
 }
