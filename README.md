@@ -1,6 +1,6 @@
 # fbx-viewer-vue
 
-Simple and fast strengthen your apps with 3d
+Simple and fast strengthen your apps with 3d.Built with three.js
 
 ## Component Parameters
 
@@ -21,3 +21,8 @@ Simple and fast strengthen your apps with 3d
 | `distance`         | { minDistance: number; maxDistance: number }  | `{ minDistance: 0.8, maxDistance: 1 }`           | Distance constraints for camera movement.    |
 | `autoRotate`       | { value: boolean; rotateSpeed: number }       | `{ value: true, rotateSpeed: 2 }`                | Auto-rotation settings for the scene.        |
 | `cameraPosition`   | { x: number; y: number; z: number }           | `{ x: 1, y: 1, z: 1 }`                           | Default position of the camera.             |
+
+
+### Feel Free to contribute 
+
+https://github.com/Yhk5306/fbx-viewer-vue
