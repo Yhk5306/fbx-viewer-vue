@@ -1,6 +1,6 @@
 {
   "name": "fbx-viewer-vue",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "main": "dist/fbx-viewer-vue.umd.js",
   "module": "dist/fbx-viewer-vue.mjs",

@@ -2,6 +2,36 @@
 
 Simple and fast strengthen your apps with 3d.Built with three.js
 
+## Usage
+```vue
+<template>
+  <div>
+    <FbxViewer
+      fbx="/path/to/your/model.fbx"
+      :ToplightPosition="{ x: 0, y: 2, z: 0 }"
+      :TopPointLight="{ color: '#ffffff', intensity: 1, distance: 8 }"
+      :BottomLightPosition="{ x: 0, y: -2, z: 0 }"
+      :BottomPointLight="{ color: '#421630', intensity: 1, distance: 10 }"
+      :ObjColor="'#fefefe'"
+      :SceneBg="{ color: '#041839', alpha: 0 }"
+      :animate="{ animate: true, duration: 1000 }"
+      :distance="{ minDistance: 0.8, maxDistance: 1 }"
+      :autoRotate="{ value: true, rotateSpeed: 2 }"
+      :cameraPosition="{ x: 1, y: 1, z: 1 }"
+    />
+  </div>
+</template>
+
+<script>
+import FbxViewer from 'my-fbx-viewer';
+
+export default {
+  components: {
+    FbxViewer
+  }
+};
+</script>
+```
 ## Component Parameters
 
 | Name               | Type                                          | Default Value                                    | Description                                   |
